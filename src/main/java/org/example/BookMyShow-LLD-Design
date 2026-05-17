@@ -1,0 +1,74 @@
+// BookMyShow
+
+
+1. User
+2. Theaters
+3. Movies
+4. Booking
+5. Payments
+
+
+		      User Entity
+// service-user  --> - Id
+		     - name
+		     - List<Cards> .. etc
+
+
+
+// service-invntory   Move Entity
+                    -> Id
+		    -> name
+		    -> List<Artists>
+ 		    -> rating
+		    -> RunningTime
+		    -> type
+		    -> Desctiption
+
+		    Theater Entity
+		    -> Id
+		    -> Address
+
+
+
+		    TheartTimings Entity
+
+		    -> theaterId
+		    -> movieId
+		    -> Timings
+
+		    TheaterSets Entity
+		   -> ID
+		   -> TheaterId
+		   -> Number(String)
+		   -> Type
+
+
+
+		   Invntroy Details Entriy
+		-> Id
+		-> theaterSetEntiyId
+		-> MovieId
+		-> Timings
+		-> Status
+		-> price
+
+
+
+
+// Service-booking  Booking Entity
+		   -> ID (Order Id)
+		   -> theaterId
+		   -> MovieId
+		   -> timings
+		   -> Username
+		   -> SeatNumber
+		   -> TotalPrice
+		   -> offerrPrice
+	           -> tax amount
+
+
+		  BookingPayments Entiry
+		 -> id
+		 -> bookingId
+		-> status
+		-> CouponId
