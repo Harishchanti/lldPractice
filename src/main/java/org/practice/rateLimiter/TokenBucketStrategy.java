@@ -43,7 +43,7 @@ public class TokenBucketStrategy implements RateLimiterStrategy{
     private void refill(Bucket bucket) {
         long now = System.currentTimeMillis();
         long elapsed = now - bucket.lastRefillTime;
-        int tokensToAdd = (int) (elapsed / 1000 * refillRatePerSec);
+        int tokensToAdd = (int) ((elapsed / 1000) * refillRatePerSec);
 
         if (tokensToAdd > 0) {
             bucket.tokens = Math.min(capacity, bucket.tokens + tokensToAdd);
