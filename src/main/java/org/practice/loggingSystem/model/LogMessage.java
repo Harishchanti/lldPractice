@@ -13,6 +13,6 @@ public class LogMessage {
 
     public LogLevel getLevel() { return level; }
     public String format() {
-        return "[" + timestamp + "] [" + level + "] " + message;
+        return " [ " + timestamp + " ] [ " + level + " ] " + message;
     }
 }
