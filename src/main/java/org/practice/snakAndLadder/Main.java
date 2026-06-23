@@ -43,7 +43,7 @@ public class Main {
 
             players.add(player);
         }
-        System.out.println("Final postions of all the players");
+        System.out.println("Final positions of all the players");
 
         while (!players.isEmpty()) {
             Player player = players.poll();
