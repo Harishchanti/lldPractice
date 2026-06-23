@@ -14,6 +14,9 @@ public class Inode {
     // For file
     String content;
 
+    // For directory
+    Map<String, Inode> children;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -46,9 +49,6 @@ public class Inode {
             Map<String, Inode> children) {
         this.children = children;
     }
-
-    // For directory
-    Map<String, Inode> children;
 
     public Map<String, Inode> getChildren() {
         return children;

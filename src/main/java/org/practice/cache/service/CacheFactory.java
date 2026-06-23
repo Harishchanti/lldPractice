@@ -11,10 +11,10 @@ public class CacheFactory {
     public CacheFactory() {
         map.put(CacheType.TTL, new TTLCache(2000));
         map.put(CacheType.LRU, new LRUCache(3));
+        map.put(CacheType.LFU, new LFUCache(3));
     }
 
-    public Cache getCache(CacheType type)
-            throws CacheTypeNoFoundException {
+    public Cache getCache(CacheType type) throws CacheTypeNoFoundException {
         if (!map.containsKey(type)) {
             throw new CacheTypeNoFoundException(
                     " Cache Type:" + type + " not found");
