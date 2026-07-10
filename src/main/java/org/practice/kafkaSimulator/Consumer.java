@@ -32,6 +32,7 @@ class Consumer implements Runnable {
     }
 
     private void process(Message msg) throws InterruptedException {
+        System.out.println(msg);
         Thread.sleep(1000); // simulate work
     }
 }

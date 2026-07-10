@@ -11,7 +11,6 @@ public class TokenBucketStrategy implements RateLimiterStrategy{
     private static class Bucket {
         int tokens;
         long lastRefillTime;
-
         Bucket(int capacity) {
             this.tokens = capacity;
             this.lastRefillTime = System.currentTimeMillis();

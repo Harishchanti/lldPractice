@@ -10,6 +10,7 @@ public class Main {
         board.addPlayers(new Player("A"));
         board.addPlayers(new Player("B"));
         board.addPlayers(new Player("C"));
+        board.addPlayers(new Player("D"));
 
         board.addLaddersInBoard(4, 20);
         board.addLaddersInBoard(12, 34);
@@ -27,11 +28,13 @@ public class Main {
 
             Player player = players.poll();
             int position = dice.rollDice();
-
+            System.out.println(
+                    "Roll Dice Pos : " + position + " player :" + player.name);
             position = board.getFinalPosition(position);
             player.currentPosition =
                     ((player.currentPosition + position) > board.size) ?
-                            position : (player.currentPosition + position);
+                            player.currentPosition :
+                            (player.currentPosition + position);
 
             if (player.currentPosition == board.size) {
                 System.out.println(
