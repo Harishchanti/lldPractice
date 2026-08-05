@@ -35,4 +35,13 @@ public class ParkingFloor {
         System.out.println("Parking is Full for vehicleType " + type);
         return null;
     }
+
+    public ParkingSlot getRandomFreeSlot(VehicleType type) {
+        for (ParkingSlot parkingSlot : slots.get(mapVehicleToSlot(type))) {
+            if (parkingSlot.isFree)
+                return parkingSlot;
+        }
+        System.out.println("Parking is Full for vehicleType " + type);
+        return null;
+    }
 }
