@@ -101,8 +101,8 @@ public class LRUCache<K, V> implements Cache<K, V> {
 class CacheNode<K, V> {
     K key;
     V value;
-    CacheNode prev;
-    CacheNode next;
+    CacheNode<K, V> prev;
+    CacheNode<K, V> next;
 
     CacheNode(K key, V value) {
         this.key = key;
