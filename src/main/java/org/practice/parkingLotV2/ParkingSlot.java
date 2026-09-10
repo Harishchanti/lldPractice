@@ -30,4 +30,8 @@ public class ParkingSlot {
         this.vehicle = null;
         this.isFree = true;
     }
+
+    boolean canPark(SlotType slotType){
+        return slotType.equals(this.type);
+    }
 }

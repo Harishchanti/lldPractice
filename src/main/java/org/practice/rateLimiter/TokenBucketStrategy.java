@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class TokenBucketStrategy implements RateLimiterStrategy{
 
-    private static class Bucket {
+    private  class Bucket {
         int tokens;
         long lastRefillTime;
         Bucket(int capacity) {

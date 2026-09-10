@@ -7,6 +7,7 @@ import java.util.Map;
 public class EvaluationContext {
     private Clock clock; // for testability
     private Map<String, Object> config;
+    ThreadLocal<Map<String,String>> threadLocal;
 
     public EvaluationContext(Clock clock, Map<String, Object> config) {
         this.clock = clock;

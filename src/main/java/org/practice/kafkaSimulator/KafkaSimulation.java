@@ -16,9 +16,9 @@ Partitioon count : 3
 
  */
 public class KafkaSimulation {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        Topic topic = new Topic(3);
+        /*Topic topic = new Topic(3);
 
         // Producers
         for (int i = 0; i < 3; i++) {
@@ -27,8 +27,23 @@ public class KafkaSimulation {
 
         // Consumers (1 per partition)
         for (int i = 0; i < 3; i++) {
+
+
             Partition partition = topic.getPartition(i);
             new Thread(new Consumer(partition, "Consumer-" + i, i)).start();
-        }
+        }*/
+
+        dd d = new f();
+        System.out.println(d.ff(1,1));
     }
+}
+
+interface dd {
+    default int ff(int h,int cost) {
+        return h *  cost;
+    }
+}
+
+class f implements dd {
+
 }
